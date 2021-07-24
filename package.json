@@ -1,0 +1,17 @@
+{
+  "name": "pxgdex-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": "git@github.com:vinavega/pxgdex-api.git",
+  "author": "Victor Navega <victor.nevega@invillia.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
