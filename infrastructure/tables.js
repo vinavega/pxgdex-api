@@ -3,16 +3,38 @@ const connection = require("./dbConnection");
 class Tables {
   init() {
     this.connection = connection;
-    this.createTables();
+    this.createPokemons();
+    this.createPokemonsImages();
   }
 
-  createTables() {
-    const sql =
-      'CREATE TABLE IF NOT EXISTS pokemon(id int NOT NULL AUTO_INCREMENT,name varchar(50) NOT NULL, created datetime NOT NULL, updated datetime NOT NULL,PRIMARY KEY(id))'
+  createPokemons() {
+    const sql = `CREATE TABLE IF NOT EXISTS pokemon(
+        id int NOT NULL AUTO_INCREMENT,
+        name varchar(50) NOT NULL, 
+        created datetime NOT NULL, 
+        updated datetime NOT NULL,
+        PRIMARY KEY(id)
+        )`;
     this.connection.query(sql, (error) => {
       if (error) {
         console.log(error);
-      } else console.log("tables created");
+      } else console.log("table pokemon created");
+    });
+  }
+  createPokemonsImages() {
+    const sql = `CREATE TABLE IF NOT EXISTS pokemon_image(
+        id int NOT NULL AUTO_INCREMENT, 
+        image LONGTEXT, 
+        created datetime NOT NULL, 
+        updated datetime NOT NULL,
+        pokemon_id int NOT NULL, 
+        PRIMARY KEY(id), 
+        FOREIGN KEY (pokemon_id) REFERENCES pokemon(id)
+        );`;
+    this.connection.query(sql, (error) => {
+      if (error) {
+        console.log(error);
+      } else console.log("table Pokemon_image created");
     });
   }
 }

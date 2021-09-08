@@ -1,5 +1,3 @@
-// const e = require("express");
-// const { response } = require("express");
 const connection = require("../infrastructure/dbConnection");
 const moment = require("moment");
 
@@ -18,7 +16,7 @@ class pokemon {
     const created = new Date();
     const updated = created;
     const isPokemonNotEmpty = pokemon.name === "";
-    const isPokemonNotNull = pokemon.name === null || pokemon.name === "";
+    const isPokemonNotNull = pokemon.name === null;
     const isPokemonUndefined = pokemon.name === undefined;
     const validations = [
       {
@@ -71,7 +69,7 @@ class pokemon {
     const updated = new Date();
     const object = { ...pokemon, updated };
     const isPokemonNotEmpty = pokemon.name === "";
-    const isPokemonNotNull = pokemon.name === null || pokemon.name === "";
+    const isPokemonNotNull = pokemon.name === null;
     const isPokemonUndefined = pokemon.name === undefined;
     const validations = [
       {
