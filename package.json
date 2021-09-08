@@ -9,7 +9,12 @@
   "author": "Victor Navega <victor.nevega@invillia.com>",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2"
   },
   "dependencies": {
     "consign": "^0.1.6",

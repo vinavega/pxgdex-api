@@ -1,4 +1,5 @@
-const connection = require("./dbConnection");
+/* eslint-disable require-jsdoc */
+const connection = require('./dbConnection');
 
 class Tables {
   init() {
@@ -18,7 +19,7 @@ class Tables {
     this.connection.query(sql, (error) => {
       if (error) {
         console.log(error);
-      } else console.log("table pokemon created");
+      } else console.log('table pokemon created');
     });
   }
   createPokemonsImages() {
@@ -34,7 +35,7 @@ class Tables {
     this.connection.query(sql, (error) => {
       if (error) {
         console.log(error);
-      } else console.log("table Pokemon_image created");
+      } else console.log('table Pokemon_image created');
     });
   }
 }

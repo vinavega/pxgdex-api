@@ -1,5 +1,3 @@
-const fs = require("fs")
+const fs = require('fs');
 
-fs.readFile("./assets/charmander.png", (erro,buffer)=>{
-
-})
+fs.readFile('./assets/charmander.png', (erro) => {});
