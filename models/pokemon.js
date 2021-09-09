@@ -1,4 +1,3 @@
-/* eslint-disable require-jsdoc */
 const connection = require('../infrastructure/dbConnection');
 
 class Pokemon {

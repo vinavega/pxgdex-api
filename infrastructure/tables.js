@@ -1,4 +1,3 @@
-/* eslint-disable require-jsdoc */
 const connection = require('./dbConnection');
 
 class Tables {

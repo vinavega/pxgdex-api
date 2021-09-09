@@ -3,18 +3,22 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "test": "jest --detectOpenHandles",
+    "start": "nodemon server.js"
   },
   "repository": "git@github.com:vinavega/pxgdex-api.git",
   "author": "Victor Navega <victor.nevega@invillia.com>",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^7.32.0",
-    "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.1.1",
     "nodemon": "^2.0.12",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "superagent": "^6.1.0",
+    "supertest": "^6.1.6"
   },
   "dependencies": {
     "consign": "^0.1.6",
