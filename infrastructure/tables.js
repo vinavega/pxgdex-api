@@ -1,10 +1,10 @@
-const connection = require('./dbConnection');
+const connection = require('./dbConnection')
 
 class Tables {
   init() {
-    this.connection = connection;
-    this.createPokemons();
-    this.createPokemonsImages();
+    this.connection = connection
+    this.createPokemons()
+    this.createPokemonsImages()
   }
 
   createPokemons() {
@@ -14,12 +14,12 @@ class Tables {
         created datetime NOT NULL, 
         updated datetime NOT NULL,
         PRIMARY KEY(id)
-        )`;
+        )`
     this.connection.query(sql, (error) => {
       if (error) {
-        console.log(error);
-      } else console.log('table pokemon created');
-    });
+        console.log(error)
+      } else console.log('table pokemon created')
+    })
   }
   createPokemonsImages() {
     const sql = `CREATE TABLE IF NOT EXISTS pokemon_image(
@@ -30,13 +30,13 @@ class Tables {
         pokemon_id int NOT NULL, 
         PRIMARY KEY(id), 
         FOREIGN KEY (pokemon_id) REFERENCES pokemon(id)
-        );`;
+        );`
     this.connection.query(sql, (error) => {
       if (error) {
-        console.log(error);
-      } else console.log('table Pokemon_image created');
-    });
+        console.log(error)
+      } else console.log('table Pokemon_image created')
+    })
   }
 }
 
-module.exports = new Tables();
+module.exports = new Tables()

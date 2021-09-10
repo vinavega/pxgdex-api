@@ -1,5 +1,5 @@
-const customExpress = require('./config/customExpress.js');
+const customExpress = require('./config/customExpress.js')
 
-const app = customExpress();
+const app = customExpress()
 
-module.exports = app;
+module.exports = app

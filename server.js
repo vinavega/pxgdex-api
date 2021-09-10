@@ -1,4 +1,4 @@
-const app = require('./app');
+const app = require('./app')
 // const connection = require('./infrastructure/dbConnection');
 // const tables = require('./infrastructure/tables');
 
@@ -10,7 +10,8 @@ const app = require('./app');
 //     tables.init(connection);
 //   }
 // });
+const port = process.env.APP_PORT || 3000
 
 if (require.main === module) {
-  app.listen(3000, () => console.log('starting server at door 3000'));
+  app.listen(port, () => console.log('starting server at door 3000'))
 }
