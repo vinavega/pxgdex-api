@@ -15,10 +15,12 @@ class Tables {
         updated datetime NOT NULL,
         PRIMARY KEY(id)
         )`
-    this.connection.query(sql, (error) => {
+    this.connection.query(sql, (error, response) => {
       if (error) {
         console.log(error)
-      } else console.log('table pokemon created')
+      } else if (response.warningCount === 0) {
+        console.log('table pokemon created')
+      }
     })
   }
   createPokemonsImages() {
@@ -31,10 +33,12 @@ class Tables {
         PRIMARY KEY(id), 
         FOREIGN KEY (pokemon_id) REFERENCES pokemon(id)
         );`
-    this.connection.query(sql, (error) => {
+    this.connection.query(sql, (error, response) => {
       if (error) {
         console.log(error)
-      } else console.log('table Pokemon_image created')
+      } else if (response.warningCount === 0) {
+        console.log('table pokemon_image created')
+      }
     })
   }
 }

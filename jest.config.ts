@@ -32,7 +32,7 @@ export default {
 
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: 'v8',
-  collectCoverageFrom: ['<rootDir>/**/*.js'],
+  collectCoverageFrom: ['<rootDir>/src/(services|start)/**/*.js'],
   coverageReporters: ['text-summary', 'lcov'],
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
@@ -95,7 +95,7 @@ export default {
 
   // A preset that is used as a base for Jest's configuration
   preset: 'ts-jest',
-  testMatch: ['**/__tests__/**/*.ts'],
+  testMatch: ['**/__tests__/**/*.js'],
 
   // Run tests from one or more projects
   // projects: undefined,
